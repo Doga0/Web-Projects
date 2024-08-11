@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="modal.css">
+        <title>Pig Game</title>
+    </head>
+    <body>
+        <div class="modal hidden">
+            <header>
+                <button class="close-modal">&times;</button>
+                <h1>How To Play?</h1>
+            </header>
+            <p class="rules">
+                Each turn, a player click the ROLL DICE button until either a 1 is rolled or player decides to hold.
+                <p class="rules"><i class="fi fi-rr-arrow-small-right"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewbox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path xmlns="http://www.w3.org/2000/svg" d="M18,12h0a2,2,0,0,0-.59-1.4l-4.29-4.3a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42L15,11H5a1,1,0,0,0,0,2H15l-3.29,3.29a1,1,0,0,0,1.41,1.42l4.29-4.3A2,2,0,0,0,18,12Z" fill="#6422eb" data-original="#000000"/></g></svg>
+                    If the player rolls a 1, their current score will be 0 and the total score will not increase. It becomes the next player's turn.
+                </p>
+                <p class="rules"><i class="fi fi-rr-arrow-small-right"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewbox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path xmlns="http://www.w3.org/2000/svg" d="M18,12h0a2,2,0,0,0-.59-1.4l-4.29-4.3a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42L15,11H5a1,1,0,0,0,0,2H15l-3.29,3.29a1,1,0,0,0,1.41,1.42l4.29-4.3A2,2,0,0,0,18,12Z" fill="#6422eb" data-original="#000000"/></g></svg>
+                    If the player rolls any other number, it is added to their score and the player's turn continues.
+                </p>
+                <p class="rules"><i class="fi fi-rr-arrow-small-right"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewbox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path xmlns="http://www.w3.org/2000/svg" d="M18,12h0a2,2,0,0,0-.59-1.4l-4.29-4.3a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42L15,11H5a1,1,0,0,0,0,2H15l-3.29,3.29a1,1,0,0,0,1.41,1.42l4.29-4.3A2,2,0,0,0,18,12Z" fill="#6422eb" data-original="#000000"/></g></svg>
+                    If the player chooses to hold, their current score is added to their score and it becomes the next player's turn. 
+                </p>
+            </p>
+        </div>
+        <div class="overlay hidden"></div>
+        <main>
+            
+            <section id="player-current">  
+                <div id="modal">
+                    <button class="open-modal">?</button>
+                </div>              
+                <div class="player-one player--0 player--active">
+                    <div>
+                        <p class="name" id="name--0">PLAYER 1</p>
+                    </div>
+                    <div id="label1">
+                        <label for="hold-btn" class="pt-label" id="score--0">0</label>
+                    </div>
+                    <div class="current">
+                        <p class="current-label">Current</p>
+                        <p class="current-score" id="current--0">0</p>
+                    </div>
+                </div>
+                <div class="player-two player--1">
+                    <div>
+                        <p class="name" id="name--1">PLAYER 2</p>
+                    </div>
+                    <div id="label2">
+                        <label for="hold-btn" class="pt-label" id="score--1">0</label>
+                    </div>
+                    <div class="current">
+                        <p class="current-label">Current</p>
+                        <p class="current-score" id="current--1">0</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div id="btns">
+                    <div class="btn-up">
+                        <button type="reset" class="reset-btn"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                            </svg>NEW GAME</button>
+                    </div>
+                    <img src="dice-5.png" alt="Playing dice" class="dice" />
+                    <div class="btn-down">
+                        <button class="roll-btn">🎲 ROLL DICE</button>
+                        <div>
+                            <button class="hold-btn">📥 HOLD</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+        <script src="modal.js"></script>
+    </body>
+</html>
