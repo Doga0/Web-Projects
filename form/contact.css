@@ -1,0 +1,356 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url(/formcalisma/vecteezy_wildlife-elk-in-forest-nature-landscape-vector-illustration_.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+/* ---contact ve index sayfalarında arkaplan resimleri aynı pozisyonda değil
+------others hover yapıldığında navbar oynuyor */
+
+#header-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background-color: #072233;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 0.3rem;
+}
+
+#page-logo a {
+    color: rgb(223, 246, 255);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    text-decoration: none;
+    padding-left: 1.5rem;
+}
+
+#navs {
+    align-items: center;
+    display: flex;
+    flex-direction: row;  
+    list-style: none;  
+    padding-right: 1.8rem;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    /* margin-left: 1rem; */
+    font-family: 'Raleway', sans-serif;
+    width: 5.6rem;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: rgb(223, 246, 255);
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    transition: border 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    border: 2px solid rgb(223, 246, 255);
+    background-color: #0a344f;
+}
+
+/* .dropbtn {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} */
+
+.nav-item:nth-child(5) {
+    color: rgb(223, 246, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.dropbtn {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #072233;
+    width: 5.6rem;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.dropdown-content a {
+    color: rgb(223, 246, 255);
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content .sign-up {
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+ 
+.dropdown-content a:hover {
+    background-color: #0a344f;
+    border: none;
+}
+
+.nav-item:nth-child(5):hover .dropdown-content {
+  display: block;
+}
+
+svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+
+main h1 {
+    /* display: none; */
+    text-align: center;
+    margin-top: 6rem;
+    color: #072233;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.h1-title {
+    text-align: center;
+    /* border-radius: 0.3rem; */
+    /* background-color: #e4b19858; */
+    border-left:2px solid #072233;
+    border-right:2px solid #072233;
+    animation-iteration-count: 1;
+    animation: closeopen 4s ease-in-out forwards;
+}
+
+@keyframes closeopen {
+    0% {
+        top: 0.5rem;
+        width: 0px;
+        color: rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        top: 0.5rem;
+        width: 168px;
+        color: rgba(0, 0, 0, 0);
+    }
+
+    68% {
+        top: 0.5rem;
+        width: 168px;
+        color: #072233;
+    }
+
+    100% {
+        top: 0.5rem;
+        width: 168px;
+        color: #072233;
+    }
+}
+
+#contact-form {
+    background-color: rgba(255,255,255,0.1);  
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.4rem;
+    margin: 2.5rem 28rem;
+    -webkit-box-shadow: -10px -10px 18px -5px rgba(0,0,0,0.34);
+    -moz-box-shadow: -10px -10px 18px -5px rgba(0,0,0,0.34);
+    box-shadow: -10px -10px 18px -5px rgba(0,0,0,0.34);
+
+}
+
+main ul {
+    /* margin: 0;
+    padding: 0; */
+    margin: 0 1.5rem;
+    padding: 0 1.5rem;
+    list-style: none;
+}
+
+.h2-title {
+    margin: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
+    color: #D4CF9F;
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1;
+}
+
+label {
+    color: #e4b198;
+    font-weight: bold;
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1;
+}
+
+main input {
+    border: none;
+    outline: none;
+    border-bottom:2px solid #FBCEB7;
+    background: transparent;
+    -webkit-transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out;
+    transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out; 
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1; 
+}
+
+main input:focus {
+    outline: #e4b198;
+    border-inline-color: 2px solid #e4b198;
+    border: 2px solid #e4b198;
+    border-radius: 0.2rem;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border: 1px solid rgb(184,184,184);
+    padding: 0.25rem;
+    color: rgb(61,58,58);
+    margin-top: 0.3rem;
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1;
+}
+
+select {
+    background-color: #07223348;
+    color: #072233;
+    border: 2px solid #07223348;
+    border-radius: 0.2rem;
+    border-inline: 1px solid #07223348;
+    outline: 1px solid #07223348;
+    transition: background-color 0.6s ease;
+}
+
+select:hover {
+    background-color: #07223352;
+}
+
+textarea {
+    resize: none;
+    /* border: none;
+    outline: none; */
+    /* border-radius: 6px;  */
+    border-radius: 0.2rem;
+    border-bottom: solid 2px #e4b198;
+    background: transparent;
+    -webkit-transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out;
+    transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out; 
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1; 
+}
+
+textarea:focus {
+    outline: 2px solid #e4b198;
+    border-inline-color: 2px solid #e4b198;
+}
+
+
+.form-control-inline {
+    display: flex;
+}
+
+.form-control-inline input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+#terms-section label {
+    transition: color 0.8s ease-out;
+}
+
+#terms-section label:hover {
+    color: #e5c4b3;
+}
+
+#radios label {
+    transition: color 0.8s ease-out;
+}
+
+
+#radios label:hover {
+    color: #e5c4b3;
+}
+
+#terms {
+    margin-left: 3.3rem;   
+}
+
+#btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem; 
+    transition: background-color 0.9s ease-out;  
+}
+
+.clear-btn:hover,
+.submit-btn:hover {
+    transform: scale(1.05);
+}
+
+.clear-btn {
+    margin-right: 0.3rem;
+    padding: 0.2rem 0.3rem;
+    background-color: rgb(223, 246, 255);
+    color: #072233;
+    border:1px solid rgb(223, 246, 255);
+    cursor: pointer;
+    border-radius: 0.2rem;
+    font-weight: bold;
+}
+
+.submit-btn {
+   background-color: #072233; 
+   color: rgb(223, 246, 255);
+   cursor: pointer;
+   border-radius: 0.3rem;
+   font-weight: bold;
+   border: 1px solid #072233;
+}
+
+

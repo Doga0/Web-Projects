@@ -1,0 +1,213 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url(/formcalisma/vecteezy_wildlife-elk-in-forest-nature-landscape-vector-illustration_.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+
+#header-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background-color: #072233;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 0.3rem;
+}
+
+#page-logo a {
+    color: rgb(223, 246, 255);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    text-decoration: none;
+    padding-left: 1.5rem;
+}
+
+#navs {
+    align-items: center;
+    display: flex;
+    flex-direction: row;  
+    list-style: none;  
+    padding-right: 1.8rem;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    width: 5.6rem;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: rgb(223, 246, 255);
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    transition: border 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    border: 2px solid rgb(223, 246, 255);
+    background-color: #0a344f;
+}
+
+
+.nav-item:nth-child(5) {
+    color: rgb(223, 246, 255);
+    z-index: 1;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.dropbtn {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #072233;
+    width: 5.6rem;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.dropdown-content a {
+    color: rgb(223, 246, 255);
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 0px;
+}
+
+.dropdown-content .sign-up {
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+ 
+.dropdown-content a:hover {
+    background-color: #0a344f;
+    border: none;
+}
+
+.nav-item:nth-child(5):hover .dropdown-content {
+  display: block;
+}
+
+svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+main {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    background-color: rgba(255,255,255,0.1);  
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 12rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    border-radius: 8px;
+    padding-top: 4rem;
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+    
+h1 {
+    color: #072233;
+    font-size: 4rem;
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1;
+}
+
+h2 {
+    color: #E6BCA7
+}
+
+#input-items {
+    list-style: none;
+}
+
+.label {
+    color: #E6BCA7;
+    font-size: 2rem;
+    font-weight: 400;
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1;
+}
+
+.input-item {
+    height: 4rem;
+}
+
+#email {
+    width: 12rem;
+    border: none;
+    outline: none;
+    /* border-radius: 6px;  */
+    border-bottom: solid 2px #FBCEB7;
+    background: transparent;
+    -webkit-transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out;
+    transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out; 
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1;    
+}
+
+#email:focus{
+    outline: #FBCEB7;
+    border: 2px solid #FBCEB7;
+    height: 2rem;
+    border-radius: 6px; 
+}
+
+#password {
+    width: 12rem;
+    border: none;
+    outline: none;
+    /* border-radius: 6px;  */
+    border-bottom: solid 2px #FBCEB7;
+    background: transparent;
+    -webkit-transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out;
+    transition: border-right 0.5s ease-out, border-left 0.5s ease-out, border-top 0.5s ease-out;
+    animation-duration: 2.5s;
+    animation: 2.5s anim-lineUp ease-out infinite;
+    animation-iteration-count: 1;
+}
+
+#password:focus{
+    outline: #FBCEB7;
+    border: 2px solid #FBCEB7;
+    height: 2rem;
+    border-radius: 6px; 
+}

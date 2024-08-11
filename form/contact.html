@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header id="header-up">
+        <section id="page-logo">
+            <a href="">DOĞA</a>
+        </section>
+
+        <section>
+            <nav>
+                <ul id="navs">
+                    <li class="nav-item">
+                        <a href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="dropbtn">Others
+                            <i class="fa-solid fa-caret-down"></i>
+                            <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> 
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="index.html" class="sign-in">Sign In</a>
+                            <a href="#" class="sign-up">Sign up</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </section>    
+    </header>
+    <main>
+        <form action="" method="get">
+            <h1>
+                <div class="h1-title">
+                    Contact Us
+                </div>
+            </h1>
+            <div id="contact-form">
+                <section>
+                    <h2 class="h2-title">How can we help you?</h2>
+                    <ul>
+                        <li>
+                            <label for="username" style="color: #E0DCA8;">Your Name</label>
+                            <input type="text" name="user-name" id="username" required>
+                        </li>
+                        <li>
+                            <label for="email" style="color: #E0DCA8;">Your E-Mail Adress</label>
+                            <input type="email" name="e-mail" id="email" required>
+                        </li>
+                        <li>
+                            <label for="phonenumber" style="color: #E0DCA8;">Your Phone Number</label>
+                            <input type="number" name="phone-number" id="phonenumber" required>
+                        </li>
+                    </ul>   
+                </section>
+        
+                <section>
+                    <ul>
+                        <li>
+                            <label for="message" style="color: #E0DCA8;">Your Message</label>
+                            <textarea name="Message" id="message"  required rows="8"></textarea>
+                        </li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <ul>
+                        <li>
+                            <label for="findus" style="color: #E0DCA8;">How did you find us?</label>
+                            <select name="find-us" id="findus" required>
+                                <option value=""></option>
+                                <option value="">Social Media</option>
+                                <option value="">From a Friend</option>
+                                <option value="">From an Advertisement</option>
+                                <option value="">Web Search</option>
+                            </select>
+                        </li>
+                    </ul>
+                    
+                </section>
+                <section>
+                    <h2 class="h2-title">How should we reply?</h2>
+                    <ul id="radios">
+                        <li class="form-control-inline">
+                            <input type="radio" name="reply-call" id="replycall">
+                            <label for="replycall"> Call me</label>
+                        </li>
+                        <li class="form-control-inline">
+                            <input type="radio" name="reply-email" id="replyemail">
+                            <label for="replyemail">Send me an email</label>
+                        </li>
+                        <li class="form-control-inline">
+                            <input type="radio" name="dont-reply" id="dontreply">
+                            <label for="dontreply">Don't reply</label>
+                        </li>
+                    </ul>
+                </section>
+        
+                <section id="terms-section">
+                    <div class="form-control-inline">
+                        <input type="checkbox" name="agree-terms" id="terms" required>
+                        <label for="terms">Accept Terms</label>
+                    </div>   
+                </section>
+        
+                <section id="btns">
+                        <button type="reset" class="clear-btn">Clear</button>
+                        <button type="submit" class="submit-btn">Submit</button>  
+                </section>
+            </div>
+        </form>   
+    </main>    
+</body>
+</html>
